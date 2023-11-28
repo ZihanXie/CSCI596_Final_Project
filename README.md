@@ -1,6 +1,15 @@
 # Improving Question Generation with Fine-tuning of MT5
+### Introduction
+Our project that uses a fine-tuned T5 model aims to address the problem of automating the process of generating questions from a pair of context and answer. Traditionally, generating questions from text has been a manual task performed by humans, and is often a time-consuming and labor-intensive process. We use NLP techniques to automate the task of generating questions from text at scale, and to ensure that the questions generated are accurate, relevant, and appropriate for the intended use case.
+
 ### Problem
-Generate a relevant question based on given context and answer
+Question generation is a natural language processing task that involves generating a question from a given context and answer. The goal of this task is to generate a question that is relevant to the context and answer, and that elicits information that is not explicitly stated in the context. This task is particularly challenging because it requires the model to understand the relationship between the context and answer and to generate a question that is both grammatically correct and semantically meaningful. Furthermore, the generated question should not simply repeat the context or answer but should instead probe deeper into the underlying meaning and implications of the text.
+
+### Dataset
+#### SQuAD
+The Stanford Question Answering Dataset (SQuAD) is a popular benchmark dataset for machine reading comprehension tasks. It con- sists of a large collection of Wikipedia articles and a set of question-answer pairs, where each question corresponds to a span of text in the article. The goal is for a machine learning model to read the article and provide the cor- rect answer to each question.
+#### DRCD
+The Delta Reading Comprehension Dataset (DRCD) is a Chinese language benchmark dataset for machine reading comprehension tasks. It consists of a large collection of news articles and web pages, with over 10,000 man- ually annotated questions and corresponding answers. DRCD was created to evaluate the ability of machine learning models to under- stand and reason over Chinese text, which is a significant challenge due to the complexity of the language and the lack of large-scale annotated datasets.
 
 ### Overview
 <img width="1000" alt="1" src="https://github.com/ZihanXie/CSCI596_Final_Project/assets/112039431/1b676dfe-6069-4fe0-94c4-854b8d34c8a8">
