@@ -1,4 +1,18 @@
 # Improving Question Generation with Fine-tuning of MT5
+
+## Result Link
+The fine-tuned Model is uploaded to hugging face at https://huggingface.co/ZihanXie/QuestionGeneration
+
+## How to use it
+### Load model directly
+Use transformer package in python and import below packages
+```python
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+
+tokenizer = AutoTokenizer.from_pretrained("ZihanXie/QuestionGeneration")
+model = AutoModelForSeq2SeqLM.from_pretrained("ZihanXie/QuestionGeneration")
+```
+
 ### Introduction
 My project that uses a fine-tuned T5 model aims to address the problem of automating the process of generating questions from a pair of context and answer. Traditionally, generating questions from text has been a manual task performed by humans, and is often a time-consuming and labor-intensive process. We use NLP techniques to automate the task of generating questions from text at scale, and to ensure that the questions generated are accurate, relevant, and appropriate for the intended use case.
 
@@ -20,3 +34,4 @@ The Delta Reading Comprehension Dataset (DRCD) is a Chinese language benchmark d
 
 ### Expected Result
 <img width="600" alt="Screenshot 2023-11-25 at 9 21 55 PM" src="https://github.com/ZihanXie/CSCI596_Final_Project/assets/112039431/26c50e28-4e68-4b34-9f85-cf52970376ff">
+
