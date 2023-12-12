@@ -32,6 +32,25 @@ The Stanford Question Answering Dataset (SQuAD) is a popular benchmark dataset f
 #### DRCD
 The Delta Reading Comprehension Dataset (DRCD) is a Chinese language benchmark dataset for machine reading comprehension tasks. It consists of a large collection of news articles and web pages, with over 10,000 man- ually annotated questions and corresponding answers. DRCD was created to evaluate the ability of machine learning models to under- stand and reason over Chinese text, which is a significant challenge due to the complexity of the language and the lack of large-scale annotated datasets.
 
+#### Training
+trained a T5-based sequence-to-sequence model MT5ForConditionalGeneration on the SQuAD dataset in English. We fine-tuned the "google/mt5-base" pre-trained model using the Hugging Face Transformers library and adopted the T5TokenizerFast for tokenization. The model was trained for 3 epochs with a batch size of 5 on an NVIDIA A5000 GPU. After completing the train-ing, we saved the model and tokenizer for further use.
+
 ### Expected Result
 <img width="600" alt="Screenshot 2023-11-25 at 9 21 55 PM" src="https://github.com/ZihanXie/CSCI596_Final_Project/assets/112039431/26c50e28-4e68-4b34-9f85-cf52970376ff">
 
+### Model Performance
+#### Sentence Similarity
+converts input texts into vectors (embeddings) that capture semantic information and calculate how close (similar) they are between them. This task is particularly useful for information retrieval and clustering/grouping.
+#### Bleu
+a metric used to evaluate the quality of machine-generated text.It measures the overlap between the generated text and the reference text using n-grams and ranges from 0 to 1, with higher scores indicating better quality translations or summaries. However, it has some limitations and should be used in combination with other evaluation metrics and human judgement. 
+#### Rouge-L
+a metric used to evaluate the quality of machine-generated summaries or translations by comparing them to human-written reference summaries. It measures the longest common subsequence (LCS) between the generated summary and the reference summary and places a higher weight on longer LCS, making it a "recall-oriented" metric.
+
+| Model         | Sentence Sim | Bleu  | ROUGE-L |
+|---------------|--------------|-------|---------|
+| GPT2-QG       | 74.09        | 24.38 | 46.74   |
+| MT5-TyDiQA    | 56.02        | 3.62  | 24.97   |
+| QG(my Model)  | 80.01        | 31.61 | 53.98   |
+
+### Conclusions and future work
+Can use other languages such as Chinese, Japanese to fine-tune the model in order to leverage the ability of multilingual of MT5.
